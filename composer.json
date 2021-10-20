@@ -1,0 +1,15 @@
+{
+    "name": "devin/wakatime-php-parser",
+    "require": {
+        "netresearch/jsonmapper": "^4.0",
+        "halaxa/json-machine": "^0.7.0",
+        "symfony/var-dumper": "^5.3",
+        "nesbot/carbon": "^2.53"
+    },
+    "authors": [
+        {
+            "name": "Devin Norgarb",
+            "email": "dnorgarb@gmail.com"
+        }
+    ]
+}
