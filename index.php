@@ -23,11 +23,27 @@ $top_level_stuff = JsonMachine\JsonMachine::fromFile('wakatime-dnorgarbgmail.com
 //       ]
 //     ]
 $total_seconds = 0;
-foreach($top_level_stuff as $k => $level_property) {
-    if($k == 'days') {
-        foreach($level_property as $num_day => $day) {
-            if(isset($day['categories'][0])) {
+
+$groupByDate = [];
+
+foreach ($top_level_stuff as $k => $level_property) {
+    if ($k == 'days') {
+
+        // Each day.
+        foreach ($level_property as $num_day => $day) {
+
+            $groupByDate[$day['date']] = [];
+            //Time values
+            if (isset($day['categories'][0])) {
                 $total_seconds += $day['categories'][0]['total_seconds'];
+                $groupByDate[$day['date']]['seconds'] = $day['categories'][0]['total_seconds'];
+            }
+
+            if (isset($day['languages'][0])) {
+                foreach ($day['languages'] as $key => $langs) {
+                    $total_seconds = $langs;;
+                    $groupByDate[$day['date']]['languages'][] =  $langs['name'] . ': ' . $langs['percent'];
+                }
             }
         }
     }
@@ -43,8 +59,9 @@ $minutes = $dt->diffInMinutes($dt->copy()->addSeconds($total_seconds));
 
 
 dump(
- "Total in days ". $days . PHP_EOL.
- "Total in hours ". $hours . PHP_EOL .
- "Total in minutes ". $minutes . PHP_EOL);
+    "Total in days " . $days . PHP_EOL .
+        "Total in hours " . $hours . PHP_EOL .
+        "Total in minutes " . $minutes . PHP_EOL
+);
 dump("-----------------");
 dump($time_behind_pc);
