@@ -42,12 +42,16 @@ It calculates the total time spent on different categories, languages, and proje
 
 ## Usage
 
-1. Ensure you have a valid WakaTime data file in JSON format.
+1. Ensure you have a valid WakaTime data file in JSON format. You can retrieve this file by navigating to your [WakaTime Account](https://wakatime.com/settings/account), then clicking export as 
+depicted in the image below.
+
+[Uploading 2023-06-04_11-59.png…]()
+
 2. Run the PHP script with the following command, providing the JSON file as a command-line argument:
    ```shell
    php parse.php your_wakatime_data.json
    ```
-   Replace `your_wakatime_data.json` with the appropriate WakaTime data file.
+   Replace `your_wakatime_data.json` with the appropriate WakaTime data file name.
 
 3. Review the generated output, including the total time tracked, time behind the PC, time tracked by category, language, and project.
 
