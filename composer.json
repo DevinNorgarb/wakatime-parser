@@ -1,15 +1,24 @@
 {
-    "name": "devin/wakatime-php-parser",
-    "require": {
-        "netresearch/jsonmapper": "^4.0",
-        "halaxa/json-machine": "^0.7.0",
-        "symfony/var-dumper": "^5.3",
-        "nesbot/carbon": "^2.53"
+    "name": "devinnorgarb/wakatime-parser",
+    "autoload": {
+        "psr-4": {
+            "Devinnorgarb\\WakatimeParser\\": "src/"
+        }
     },
     "authors": [
         {
             "name": "Devin Norgarb",
             "email": "dnorgarb@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "netresearch/jsonmapper": "^4.0",
+        "halaxa/json-machine": "^0.7.0",
+        "nesbot/carbon": "^2.66",
+        "symfony/var-dumper": "^6.2"
+    }
+,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    }
 }
