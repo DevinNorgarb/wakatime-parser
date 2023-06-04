@@ -1,9 +1,18 @@
-
-# Project Name
+# Wakatime Parser - PHP
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Short description or tagline for the project.
+This project provides analysis based on your WakaTime data.
+It calculates the total time spent on different categories, languages, and projects, providing valuable (and free!) insights into your coding habits.
+
+## Features
+
+- **Time Tracking Analysis:** Gain a comprehensive overview of your time spent on coding projects.
+- **Total Time Tracked:** Calculate the total time tracked in days, hours, and minutes.
+- **Time Tracked by Category:** Analyze the distribution of time across different coding categories.
+- **Time Tracked by Language:** Understand the amount of time spent on various programming languages.
+- **Time Tracked by Project:** Identify the time dedicated to individual coding projects.
+
 
 ## Table of Contents
 
@@ -33,20 +42,14 @@ Short description or tagline for the project.
 
 ## Usage
 
-1. Update the `input.json` file with your desired data.
-2. Run the PHP script with the following command:
+1. Ensure you have a valid WakaTime data file in JSON format.
+2. Run the PHP script with the following command, providing the JSON file as a command-line argument:
    ```shell
-   php your_script.php input.json
+   php parse.php your_wakatime_data.json
    ```
-   Replace `parse.php` with the actual filename of your PHP script and `input.json` with the appropriate input file.
+   Replace `your_wakatime_data.json` with the appropriate WakaTime data file.
 
-3. View the generated output.
-
-## Features
-
-- Feature 1: Describe the feature and its benefits.
-- Feature 2: Describe the feature and its benefits.
-- ...
+3. Review the generated output, including the total time tracked, time behind the PC, time tracked by category, language, and project.
 
 ## Contributing
 
@@ -67,11 +70,6 @@ This project is licensed under the [MIT License](LICENSE).
 For any inquiries or feedback, please contact:
 
 Your Name
-- Email: your-email@example.com
-- GitHub: [your-username](https://github.com/your-username)
-
+- Email: dnorgarb@gmail.com
+- GitHub: [DevinNorgarb](https://github.com/DevinNorgarb)
 ```
-
-Make sure to replace the placeholders with the actual information relevant to your project, such as project name, repository URL, installation instructions, usage guide, features, contributing guidelines, license information, and your contact details.
-
-Additionally, consider adding relevant badges or shields to the README, such as a license badge, build status badge, or any other badges relevant to your project. These badges can provide quick information and improve the visual appeal of your repository.
